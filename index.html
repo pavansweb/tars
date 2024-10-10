@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tars</title>
+    <link rel="icon" href="https://i.postimg.cc/Fz2hR18L/pavan-logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="main-header">
+            <h1 class="logo">Tars</h1>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkModeToggle">
+                        <label for="darkModeToggle" class="toggle-label">
+                            <span class="sun-icon">&#x2600;</span>
+                            <span class="moon-icon">&#x1F319;</span>
+                        </label>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content-container">
+            <aside class="sidebar">
+                <h2>About Tars</h2>
+                <p>Tars is an AI chatbot designed by the great ft-gyan</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+                <p><strong>Powered by:</strong> Flask &amp; Python</p>
+            </aside>
+
+            <section class="chat-section">
+                <div class="chat-container">
+                    <header class="chat-header">
+                        <h2>Chat with Tars</h2>
+                        <button id="reset-btn" class="btn btn-outline-secondary">Reset Chat</button>
+                    </header>
+
+                    <div class="chat-display" id="chat-display"></div>
+
+                    <div class="chat-input">
+                        <textarea id="message-input" placeholder="Type your message here..."></textarea>
+                        <button id="send-btn" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Tars Chatbot | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </footer>
+    </div>
+
+    <script src="static/script.js"></script>
+    <script src="static/theme.js"></script>
+</body>
+</html>
