@@ -63,7 +63,7 @@ function addMessageToDisplay(text, sender) {
     // Create an image element for bot messages
     if (sender === 'bot') {
         const img = document.createElement('img');
-        img.src = '/tars_v1/assets/tars-black.png'; // Replace with your bot's image URL
+        img.src = '/tars/assets/tars-black.png'; // Replace with your bot's image URL
         messageDiv.appendChild(img);
     }
 
