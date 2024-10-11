@@ -12,28 +12,12 @@
 
 <body>
     <div class="main-container">
-        <header class="main-header">
-            <h1 class="logo">Tars</h1>
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <div class="dark-mode-toggle">
-                        <input type="checkbox" id="darkModeToggle">
-                        <label for="darkModeToggle" class="toggle-label">
-                            <span class="sun-icon">&#x2600;</span>
-                            <span class="moon-icon">&#x1F319;</span>
-                        </label>
-                    </div>
-                </ul>
-            </nav>
-        </header>
+        
 
         <div class="content-container">
             <aside class="sidebar">
                 <h2>About Tars</h2>
-                <p>Tars is an AI chatbot designed by the great ft-gyan</p>
+                <p>Tars is an AI chatbot </p>
                 <p><strong>Version:</strong> 1.0.0</p>
                 <p><strong>Powered by:</strong> Flask &amp; Python</p>
             </aside>
@@ -41,8 +25,16 @@
             <section class="chat-section">
                 <div class="chat-container">
                     <header class="chat-header">
-                        <h2>Chat with Tars</h2>
+                        <div class="dark-mode-toggle">
+                            <input type="checkbox" id="darkModeToggle">
+                            <label for="darkModeToggle" class="toggle-label">
+                                <span class="sun-icon">&#x2600;</span>
+                                <span class="moon-icon">&#x1F319;</span>
+                            </label>
+                        </div>
+                        <h2>Tars</h2>
                         <button id="reset-btn" class="btn btn-outline-secondary">Reset Chat</button>
+                        
                     </header>
 
                     <div class="chat-display" id="chat-display"></div>
@@ -56,7 +48,7 @@
         </div>
 
         <footer class="footer">
-            <p>&copy; 2024 Tars Chatbot | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            <p>&copy; 2024 Tars Chatbot | Pavan | Gyan</p>
         </footer>
     </div>
 
