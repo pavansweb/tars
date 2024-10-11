@@ -109,6 +109,12 @@ function sendMessage() {
     }
 }
 
+// JavaScript to close the sidebar when the close button is clicked
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('sidebar').style.display = 'none';
+});
+
+
 function addMessageToDisplay(text, sender) {
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('message', sender);

@@ -1,6 +1,6 @@
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
-
+body.classList.add('dark-mode');
 // Apply saved theme on load
 if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
