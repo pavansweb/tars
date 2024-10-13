@@ -1,48 +1,30 @@
-import spacy
-import wikipedia
-from wikipedia.exceptions import WikipediaException
+import os
+import google.generativeai as genai
 
-# Load the spaCy model
-nlp = spacy.load("en_core_web_sm")
+def process_gemini_query(query):
+    genai.configure(api_key=os.environ["GEMINI_API"])
 
-# Function to extract the main topic from the query
-def extract_main_topic(query):
-    doc = nlp(query)
+    # Create the model
+    generation_config = {
+      "temperature": 1,
+      "top_p": 0.95,
+      "top_k": 64,
+      "max_output_tokens": 100,
+      "response_mime_type": "text/plain",
+    }
 
-    # Find all proper nouns (which might be the main topic)
-    for token in doc:
-        if token.pos_ == "PROPN":  # Proper noun (e.g. AI, Python, Linux)
-            return token.text
+    model = genai.GenerativeModel(
+      model_name="gemini-1.5-pro",
+      generation_config=generation_config,
+      # safety_settings = Adjust safety settings
+      # See https://ai.google.dev/gemini-api/docs/safety-settings
+    )
 
-    # If no proper noun is found, return the most significant noun
-    for token in doc:
-        if token.pos_ == "NOUN":  # Nouns (e.g. technology, system)
-            return token.text
+    chat_session = model.start_chat(
+      history=[
+      ]
+    )
 
-    return None  # If no noun found, return None
+    response = chat_session.send_message(query)
 
-# Wikipedia search function
-def search_wikipedia(query):
-    try:
-        summary = wikipedia.summary(query, sentences=2)
-        return summary
-    except WikipediaException:
-        return "Sorry, I couldn't find any information on that topic."
-
-# Main processing function
-def process_query(query):
-    main_topic = extract_main_topic(query)
-
-    if main_topic:
-        response = search_wikipedia(main_topic)
-        return response
-    else:
-        return "I'm sorry, I couldn't understand your query."
-
-# Main loop to get user input
-while True:
-    user_query = input("User: ")
-    if user_query.lower() == "exit":
-        break
-    response = process_query(user_query)
-    print(f"TARS: {response}")
+    return response.text

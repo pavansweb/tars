@@ -1,6 +1,8 @@
 import spacy
 import wikipedia
 from greeting import greeting_gen
+from extract_topic import process_questioning_query
+from test import process_gemini_query
 
 #---------------------------------------------------------------------------------
 # nlp setup
@@ -60,9 +62,9 @@ def identify_intent(query):
 #--------------------------Functions------------------------------------
 
 # wikipedia search function
-def process_wikipedia(query):
+def process_wikipedia(topic):
     try:
-        result = wikipedia.summary(query, sentences=2)
+        result = wikipedia.summary(topic, sentences=2)
         return result
 
     except wikipedia.exceptions.PageError:
@@ -84,7 +86,7 @@ while True:
     if intent == "greeting":
         response = greeting_gen()
     elif intent == "wikipedia":
-        response = process_wikipedia(query)
+        response = process_gemini_query(query)
     else:
         response = "I'm sorry, I didn't understand your input."
 
