@@ -1,0 +1,40 @@
+{
+    "questions_answers": [
+        {
+            "question": "What is the capital of India?",
+            "answer": "New Delhi is the capital of India."
+        },
+        {
+            "question": "What is the capital of Australia?",
+            "answer": "Canberra is the federal capital of Australia"
+        },
+        {
+            "question": "What is the capital of Russia?",
+            "answer": "Moscow is the capital and largest city of Russia."
+        },
+        {
+            "question": "What is the capital of Japan?",
+            "answer": "Tokyo is the capital of Japan and one of the world's largest cities."
+        },
+        {
+            "question": "What is the capital of Brazil?",
+            "answer": "The current capital of Brazil, since its construction in 1960, is Brasilia."
+        },
+        {
+            "question": "What is the capital of Canada?",
+            "answer": "Ottawa, city, capital of Canada, located in southeastern Ontario."
+        },
+        {
+            "question": "What is the capital of Italy?",
+            "answer": "Rome, historic city and capital of Roma provincia (province), of Lazio regione (region), and of the country of Italy."
+        },
+        {
+            "question": "What is the capital of Germany?",
+            "answer": "Berlin, the capital city of Germany, is renowned for its exceptional range of landmarks, vibrant cultural scene and way of life that's somehow all go yet relaxed."
+        },
+        {
+            "question": "What is the capital of China?",
+            "answer": " The modern day capital of China is Beijing (literally \"Northern Capital\")"
+        }
+    ]
+}
