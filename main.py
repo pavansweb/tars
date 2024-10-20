@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from tars import main_process
+import os
 
 app = Flask(__name__)
 
@@ -20,5 +21,6 @@ def process():
     return jsonify({"error": "Missing query in request body"}), 400
   
 
-if __name__ == '__main__':
-  app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 5000))  
+    app.run(host='0.0.0.0', port=port)
