@@ -1,4 +1,4 @@
 spacy
 fuzzywuzzy
 google.generativeai
-flaskh
+flask
