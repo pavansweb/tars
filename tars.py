@@ -63,7 +63,7 @@ def process_query(query):
     questions = [qa['question'] for qa in question_answers]
     best_match, score = process.extractOne(query, questions)    
 
-    if score >= 85:
+    if score >= 90:
         for qa in question_answers:
             if qa['question'] == best_match:
                 return qa['answer']
