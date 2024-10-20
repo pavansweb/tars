@@ -2,3 +2,4 @@ spacy
 fuzzywuzzy
 google.generativeai
 flask
+python-Levenshtein

@@ -1,11 +1,13 @@
 import spacy
 import json
 from greeting import greeting_gen
+from spacy.cli import download
 from api import process_gemini_query
 from fuzzywuzzy import process
 
 #---------------------------------------------------------------------------------
 # nlp setup
+download("en_web_core_sm")
 nlp = spacy.load("en_core_web_sm")
 
 
