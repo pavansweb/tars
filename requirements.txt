@@ -1,6 +1,5 @@
 spacy
-json
 fuzzywuzzy
 google.generativeai
 random
-flask
+flaskh
