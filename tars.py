@@ -7,7 +7,7 @@ from fuzzywuzzy import process
 
 #---------------------------------------------------------------------------------
 # nlp setup
-download("en_web_core_sm")
+download("en_core_web_sm")
 nlp = spacy.load("en_core_web_sm")
 
 
