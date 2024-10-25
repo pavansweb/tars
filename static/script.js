@@ -7,13 +7,13 @@ document.getElementById('send-btn').addEventListener('click', function() {
         const userMessage = `<p><strong>You:</strong> ${message}</p>`;
         chatDisplay.innerHTML += userMessage;
 
-        // Send the user message to the backend for processing
-        fetch('/process', {
+        // Send the user message to the external API for processing
+        fetch('https://d4d3-34-125-30-192.ngrok-free.app/chat', {  // Replace with the actual API URL
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ query: message }) // Send the user query to Flask
+            body: JSON.stringify({ message: message }) // Send the user message to the external API
         })
         .then(response => response.json())
         .then(data => {
