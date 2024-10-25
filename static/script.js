@@ -26,6 +26,9 @@ document.getElementById('send-btn').addEventListener('click', function() {
             chatDisplay.scrollTop = chatDisplay.scrollHeight; // Scroll to bottom
         })
         .catch(error => {
+            // Error handling with a response message for the user
+            const errorResponse = `<p><strong>TARS:</strong> Sorry, I couldn't process that request right now.</p>`;
+            chatDisplay.innerHTML += errorResponse;
             console.error('Error:', error);
         });
     }
@@ -36,6 +39,7 @@ document.getElementById('close-btn').addEventListener('click', function() {
     document.getElementById('sidebar').style.display = 'none';
 });
 
+// Function to clear chat history
 function resetChat() {
     document.getElementById('chat-display').innerHTML = '';
 }
