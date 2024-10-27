@@ -2,7 +2,7 @@ document.getElementById('send-btn').addEventListener('click', function() {
     const message = document.getElementById('message-input').value;
 
     if (message.trim() !== '') {
-        // Append user message to chat display
+        // Append user message to chat display with proper HTML tags
         const chatDisplay = document.getElementById('chat-display');
         const userMessage = `<p><strong>You:</strong> ${message}</p>`;
         chatDisplay.innerHTML += userMessage;
@@ -17,7 +17,7 @@ document.getElementById('send-btn').addEventListener('click', function() {
         })
         .then(response => response.json())
         .then(data => {
-            // Append bot response to chat display
+            // Append bot response to chat display with proper HTML tags
             const botResponse = `<p><strong>TARS:</strong> ${data.response}</p>`;
             chatDisplay.innerHTML += botResponse;
 
