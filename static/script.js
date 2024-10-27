@@ -7,27 +7,7 @@ document.getElementById('send-btn').addEventListener('click', function() {
         const userMessage = `<p><strong>You:</strong> ${message}</p>`;
         chatDisplay.innerHTML += userMessage;
 
-        // Send the user message to the backend for processing
-        fetch('/process', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ query: message }) // Send the user query to Flask
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Append bot response to chat display with proper HTML tags
-            const botResponse = `<p><strong>TARS:</strong> ${data.response}</p>`;
-            chatDisplay.innerHTML += botResponse;
-
-            // Clear input box
-            document.getElementById('message-input').value = '';
-            chatDisplay.scrollTop = chatDisplay.scrollHeight; // Scroll to bottom
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+       
     }
 });
 
